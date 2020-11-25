@@ -1,0 +1,39 @@
+.footer {
+    border-top: 4px solid #ee4d2d;
+}
+
+.footer_heading {
+    margin-top: 40px;
+    height: 100px;
+    background-color: var(--white-color);
+}
+
+.footer__content {
+    display: flex;
+}
+
+.footer__content-1, .footer__content-2 {
+    padding: 0 20px;
+    width: 20%;
+}
+
+.footer__content-heading {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: rgba(0,0,0,.54);
+}
+
+.footer__content-list-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: rgba(0,0,0,.54);
+}
+
+.footer__content-item {
+    padding: 0;
+    margin: 0;
+}

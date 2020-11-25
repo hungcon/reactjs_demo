@@ -1,0 +1,332 @@
+/* Header */
+.header {
+    height: 120px;
+    background-image: linear-gradient(0, #fe6433, #f53e2d);
+}
+
+.header__navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+}
+
+.header__navbar-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 4px;
+}
+
+.header__navbar-item {
+    margin: 0 8px;
+    position: relative;
+}
+
+.header__navbar-item, .header__navbar-item-link {
+    display: inline-block;
+    font-size: 1.4rem;
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.header__navbar-item:nth-child(2):hover {
+    cursor: text;
+    color: var(--white-color);
+}
+
+.header__navbar-item:hover, .header__navbar-item-link:hover {
+    color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+
+}
+
+.header__navbar-item--strong {
+    font-weight: 1000;
+}
+
+.header__navbar-item--separate::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #FB9086;
+    height: 14px;
+    width: 1px;
+    right: -9px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header__navbar-item--link {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+/* Header QR Code  */
+
+.header__qr {
+    width: 186px;
+    background-color: var(--white-color);
+    position: absolute;
+    left: 0;
+    top: 118%;
+    padding: 8px;
+    border-radius: 2px;
+    display: none;
+}
+
+.header__qr::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    left: 0;
+    top: -9px;
+}
+
+.header__navbar-item--has-qr:hover .header__qr {
+    display: block;
+}
+
+.header__qr-img {
+    width: 100%;
+}
+
+.header__qr-apps {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__qr-apps-img {
+    height: 14px;
+}
+
+.header__qr_apps-item:nth-child(1) {
+    margin-left: 11px;
+}
+
+.header__qr_apps-item:nth-child(2) {
+    margin-right: 11px;
+}
+
+/* Header notification  */
+
+.header__notification {
+    width: 404px;
+    background-color: var(--white-color);
+    position: absolute;
+    top: 25px;
+    right: 0;
+    border: 1px solid #D3D3D3;
+    cursor: default;
+    transform-origin: 90% top;
+    animation: headerNotifyGrowth ease-in 0.25s;
+    will-change: opacity, transform;
+    display: none;
+    z-index: 1;
+}
+
+.header__notification::before {
+    content: "";
+    border-width: 20px 27px;
+    border-style: solid ;
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    right: 5px;
+    top: -30px;
+}
+
+.header__notification::after {
+    content: "";
+    height: 15px;
+    width: 90px;
+    position: absolute;
+    top: -14px;
+    right: 0;
+}
+
+.header__navbar-item--has-notification:hover .header__notification {
+    display: block;
+}
+
+@keyframes headerNotifyGrowth {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.header_notification--title {
+    height: 40px;
+}
+
+.header_notification--title h3 {
+    color: #999;
+    margin: 0 0 0 12px;
+    font-size: 1.4rem;
+    line-height: 40px;
+}
+
+.header__footer {
+    color: var(--black-color);
+    display: flex;
+}
+
+.header__footer-text {
+    text-decoration: none;
+    margin: auto;
+    padding: 8px 16px; 
+}
+
+/* Search  */
+
+.header__search {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    padding: 0 8px;
+}
+
+.header__search-logo {
+    width: 200px;
+    height: 50px;
+}
+
+.header__search-logo a {
+    text-decoration: none;
+}
+
+.icon-shopee-logo {
+    width: 150px;
+    fill: var(--white-color);
+}
+
+.header__input-wrap {
+    flex: 1;
+    height: 40px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    background-color: var(--white-color);
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.2);
+}
+
+.header__input {
+    flex: 1;
+    height: 100%;
+    position: relative;
+}
+
+.header__input-text {
+    width: 100%;
+    height: 100%;
+    font-size: 1.6rem;
+    outline: none;
+    border: none;
+    padding: 0 16px;
+    border-radius: 2px;
+}
+
+.header__input-select {
+    border-left: 1px solid #ccc;
+    padding-left: 16px;
+    position: relative;
+    height: 100%;
+    display: flex;
+}
+
+.header__input-select::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 150px;
+    top: 18px;
+    right: 0;
+}
+
+.header__input-select:hover .header__input-option {
+    display: block;
+}
+
+.header__input-select-label {
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+
+.header__input-select__text {
+    margin: auto;
+
+}
+
+.header__input-option {
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 2px;
+    width: 150px;
+    background-color: var(--white-color);
+    border-radius: 2px;
+    box-shadow: 0 0 3px #ccc;
+    display: none;
+}
+
+.header__input-item {
+    cursor: pointer;
+    padding: 12px 12px;
+    font-size: 1.6rem;
+}
+
+.header__input-item i {
+    display: none;
+}
+
+.header__input-icon {
+    color: var(--primary-color);
+    margin-left: 16px;
+    display: none;
+}
+
+.header__input-item--active i {
+    display: inline-block;
+}
+
+.header__input-select-icon {
+    font-size: 2rem;
+    color: #888888;
+    margin: 0 12px;
+    position: relative;
+    top: 2px
+}
+
+.header__search-btn {
+    background-color: var(--primary-color);
+    height: 32px;
+    width: 60px;
+    border: none;
+    margin-right: 12px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.header__search-btn:hover {
+    background-color: #f3694e;
+}
+
+.header__search-btn-icon {
+    color: var(--white-color);
+    font-size: 1.4rem;
+}
+
+.header__search-cart {
+    width: 150px;
+    height: 40px;
+    text-align: center;
+}
+

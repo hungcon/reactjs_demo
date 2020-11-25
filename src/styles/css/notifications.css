@@ -1,0 +1,47 @@
+
+.header__notification--list {
+    padding: 0;
+    list-style: none;
+}
+
+.header__notification--item {
+    background-color: #fe64331a;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.header__notification--item:hover {
+    background-color: #1f1f1f12;
+}
+
+.header__notification--link {
+    padding: 12px;
+    display: flex;
+    text-decoration: none;
+}
+
+.header__notification--img {
+    width: 48px;
+    object-fit: contain;
+}
+
+.header__notification--info {
+    margin-left: 12px;;
+}
+
+.header__notification--name {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 0;
+    color: rgba(17, 15, 15, 0.966);
+    display: -webkit-box; 
+    -webkit-box-orient: vertical; 
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.header__notification--description {
+    color: black;
+    font-size: 1.2rem;
+    line-height: 30px;
+    margin: 0;
+}
